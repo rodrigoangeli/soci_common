@@ -5,6 +5,7 @@ interface UserPayload {
   id: string;
   email: string;
   role: string;
+  company_id: number;
 }
 
 declare global {
