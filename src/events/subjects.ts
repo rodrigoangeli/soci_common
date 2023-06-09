@@ -1,3 +1,4 @@
-import { Subjects as SubjectLandingPage } from "./services/landingpage/subjects";
-
-export type Subjects = SubjectLandingPage;
+export enum Subjects {
+  LandingPagePublished = "landingpage:published",
+  LandingPageUnpublished = "landingpage:published",
+}
