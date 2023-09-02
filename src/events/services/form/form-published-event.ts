@@ -5,7 +5,10 @@ export interface FormPublishedEvent {
   data: {
     slug: string;
     form_id: number;
-    variationData: any;
+    formTitle: string;
+    formDescription: string;
+    submitButton: string;
+    customStyle: any;
     data: any;
     domain: string;
     subdomain: string;
