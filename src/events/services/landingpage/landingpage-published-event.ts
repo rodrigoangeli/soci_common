@@ -7,7 +7,6 @@ export interface LandingPagePublishedEvent {
     landingpage_id: number;
     variationData: any;
     data: any;
-    domain: string;
-    subdomain: string;
+    company_id: string;
   };
 }

@@ -7,10 +7,11 @@ export interface FormPublishedEvent {
     form_id: number;
     formTitle: string;
     formDescription: string;
+    formAction: string;
+    formActionData: string;
     submitButton: string;
     customStyle: any;
-    data: any;
-    domain: string;
-    subdomain: string;
+    inputs: any;
+    company_id: string;
   };
 }
