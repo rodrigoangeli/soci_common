@@ -7,6 +7,6 @@ export interface LandingPagePublishedEvent {
     landingpage_id: number;
     variationData: any;
     data: any;
-    company_id: string;
+    company_id: number;
   };
 }

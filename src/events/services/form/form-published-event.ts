@@ -12,6 +12,6 @@ export interface FormPublishedEvent {
     submitButton: string;
     customStyle: any;
     inputs: any;
-    company_id: string;
+    company_id: number;
   };
 }
