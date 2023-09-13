@@ -15,7 +15,7 @@ export const requireRole = (
     const user = req.currentUser!;
     const permission = ac.can(user.role)[action](resource);
     if (Object.keys(permission).length === 0) {
-      throw new BadRequestError("No permission was provided");
+      throw new BadRequestError("No permission was provided!");
     }
     if (permission.granted) next();
     else throw new NotAuthorizedError();
