@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "clean": "if exists build rmdir /s /q build",
-    "build": "npm run clean && ",
+    "build": "npm run clean && tsc",
     "release": "git add . && git commit -m \"Updates\" && git push && npm version patch && npm run build && npm publish"
   },
   "keywords": [],
