@@ -1,6 +1,6 @@
 {
   "name": "@soci_/common",
-  "version": "1.0.29",
+  "version": "1.0.28",
   "description": "",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
@@ -8,7 +8,7 @@
     "build/**/*"
   ],
   "scripts": {
-    "clean": "rmdir -rf build",
+    "clean": "rmdir /s /q build",
     "build": "npm run clean && tsc",
     "release": "git add . && git commit -m \"Updates\" && git push && npm version patch && npm run build && npm publish"
   },
