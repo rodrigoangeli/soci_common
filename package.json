@@ -8,8 +8,8 @@
     "build/**/*"
   ],
   "scripts": {
-    "clean": "rmdir /s /q build",
-    "build": "npm run clean && tsc",
+    "clean": "if exists build rmdir /s /q build",
+    "build": "npm run clean && ",
     "release": "git add . && git commit -m \"Updates\" && git push && npm version patch && npm run build && npm publish"
   },
   "keywords": [],
