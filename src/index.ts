@@ -19,3 +19,8 @@ export * from "./events/services/landingpage/landingpage-unpublished-event";
 export * from "./events/services/form/form-published-event";
 export * from "./events/services/form/form-unpublished-event";
 export * from "./events/subjects";
+
+export * from "./templates/emails/css";
+export * from "./templates/emails/footer";
+export * from "./templates/emails/header";
+export * from "./templates/emails/layout";
