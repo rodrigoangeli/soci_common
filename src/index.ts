@@ -21,4 +21,4 @@ export * from "./events/services/form/form-published-event";
 export * from "./events/services/form/form-unpublished-event";
 export * from "./events/subjects";
 
-export * from "./templates/emails/layout";
+export * from "./templates/emails/index";
