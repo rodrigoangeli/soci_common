@@ -1,4 +1,3 @@
-//@ts-nocheck
 import {
   Body,
   Container,
@@ -12,7 +11,17 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-export const Email = ({ preview, headerText, children }) => (
+interface EmailProps {
+  preview: string; // Assuming preview is a string
+  headerText?: string; // '?' makes headerText optional
+  children?: React.ReactNode; // 'children' can be any valid React node
+}
+
+export const Email: React.FC<EmailProps> = ({
+  preview,
+  headerText,
+  children,
+}) => (
   <Html>
     <Head />
     <Preview>{preview}</Preview>
