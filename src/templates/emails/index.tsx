@@ -8,6 +8,7 @@ import {
   Preview,
   Section,
   Text,
+  Tailwind,
 } from "@react-email/components";
 import * as React from "react";
 
@@ -22,22 +23,52 @@ export const Email: React.FC<EmailProps> = ({
   headerText,
   children,
 }) => (
-  <Html>
-    <Head />
-    {preview && <Preview>{preview}</Preview>}
-    <Body style={main}>
-      <Container style={container}>
-        <Section style={box}>
-          <Img src={``} width="49" height="21" alt="Logo" />
-          <Hr style={hr} />
-          {headerText && <Text style={header}>{headerText}</Text>}
-          {children}
-          <Hr style={hr} />
-          <Text style={footer}>Copyright @ 2024 - nome.</Text>
-        </Section>
-      </Container>
-    </Body>
-  </Html>
+  <Tailwind
+    config={{
+      theme: {
+        colors: {
+          common: {
+            black: "#000000",
+            white: "#ffffff",
+          },
+          text: "#525f7f",
+          heading: "#414552",
+          primary: {
+            light: "#6c7ff2",
+            main: "#3b52db",
+            dark: "#1a2a8c",
+          },
+          secondary: {
+            light: "#3bea99",
+            main: "#12ca75",
+            dark: "#13a863",
+          },
+          tertiary: {
+            light: "#f3f4ff",
+            main: "#f3f4ff",
+            dark: "#e1e3fb",
+          },
+        },
+      },
+    }}
+  >
+    <Html>
+      <Head />
+      {preview && <Preview>{preview}</Preview>}
+      <Body style={main}>
+        <Container style={container}>
+          <Section style={box}>
+            <Img src={``} width="49" height="21" alt="Logo" />
+            <Hr style={hr} />
+            {headerText && <Text style={header}>{headerText}</Text>}
+            {children}
+            <Hr style={hr} />
+            <Text style={footer}>Copyright @ 2024 - nome.</Text>
+          </Section>
+        </Container>
+      </Body>
+    </Html>
+  </Tailwind>
 );
 
 export default Email;
