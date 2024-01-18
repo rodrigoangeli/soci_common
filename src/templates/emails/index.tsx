@@ -12,7 +12,7 @@ import {
 import * as React from "react";
 
 interface EmailProps {
-  preview: string; // Assuming preview is a string
+  preview?: string; // Assuming preview is a string
   headerText?: string; // '?' makes headerText optional
   children?: React.ReactNode; // 'children' can be any valid React node
 }
@@ -24,7 +24,7 @@ export const Email: React.FC<EmailProps> = ({
 }) => (
   <Html>
     <Head />
-    <Preview>{preview}</Preview>
+    {preview && <Preview>{preview}</Preview>}
     <Body style={main}>
       <Container style={container}>
         <Section style={box}>
