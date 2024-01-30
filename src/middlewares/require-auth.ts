@@ -24,12 +24,20 @@ export const requireAuth = (
 ) => {
   const authHeader = req.headers.authorization;
   const token = authHeader && authHeader.split(" ")[1]; // Bearer TOKEN
-
-  if (token == null) return new NotAuthorizedError(); // No token provided
+  console.log("authHeader", authHeader);
+  if (!token || token === null) {
+    throw new NotAuthorizedError();
+  }
+  console.log("token", token);
 
   jwt.verify(token, process.env.JWT_KEY!, (err, user) => {
-    if (err) return new NotAuthorizedError();
-    req.user = user as UserPayload;
-    next();
+    if (err) {
+      console.log("err", err);
+      throw new NotAuthorizedError();
+    } else {
+      console.log("else", user);
+      req.user = user as UserPayload;
+      next();
+    }
   });
 };
