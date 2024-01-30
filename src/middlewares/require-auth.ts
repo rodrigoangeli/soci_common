@@ -27,8 +27,9 @@ export const requireAuth = (
 
   if (token == null) return new NotAuthorizedError(); // No token provided
 
-  const payload = jwt.verify(token, process.env.JWT_KEY!) as UserPayload;
-
-  req.user = payload;
-  next();
+  jwt.verify(token, process.env.JWT_KEY!, (err, user) => {
+    if (err) return new NotAuthorizedError();
+    req.user = user as UserPayload;
+    next();
+  });
 };
