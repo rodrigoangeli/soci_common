@@ -12,7 +12,7 @@ export const requireRole = (
 ) => {
   const ac = new AccessControl(permissions);
   return (req: Request, res: Response, next: NextFunction) => {
-    const user = req.currentUser!;
+    const user = req.user!;
     const permission = ac.can(user.role)[action](resource);
     if (Object.keys(permission).length === 0) {
       throw new BadRequestError("No permission was provided!");
