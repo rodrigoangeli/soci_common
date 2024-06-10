@@ -4,4 +4,6 @@ export enum Subjects {
   LandingPageUnpublished = "landingpage:unpublished",
   FormPublished = "form:published",
   FormUnpublished = "form:unpublished",
+  SubscriptionCreated = "subscription:created",
+  Conversion = "forms-resolver:conversion",
 }
