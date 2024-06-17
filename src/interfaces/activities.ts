@@ -4,8 +4,7 @@
 export interface EmailOpens {
   type: "Email Opens";
   details: {
-    emailId: string; // ID of the email that was opened
-    count: number; // Number of times the lead has opened this email
+    email_id: string; // ID of the email that was opened
   };
   timestamp: Date;
 }
@@ -13,9 +12,8 @@ export interface EmailOpens {
 export interface LinkClicks {
   type: "Link Clicks";
   details: {
-    emailId: string; // ID of the email containing the link
+    email_id: string; // ID of the email containing the link
     link: string; // URL of the link that was clicked
-    count: number; // Number of times the lead has clicked this link
   };
   timestamp: Date;
 }
@@ -23,8 +21,7 @@ export interface LinkClicks {
 export interface FormSubmissions {
   type: "Form Submissions";
   details: {
-    formId: string; // ID of the form submitted
-    count: number; // Number of times the lead has submitted this form
+    form_id: string; // ID of the form submitted
   };
   timestamp: Date;
 }
@@ -33,7 +30,6 @@ export interface WebsiteVisits {
   type: "Website Visits";
   details: {
     url: string; // URL of the website visited
-    count: number; // Number of visits to this website
   };
   timestamp: Date;
 }
@@ -42,7 +38,7 @@ export interface PageViews {
   type: "Page Views";
   details: {
     url: string; // URL of the page viewed
-    count: number; // Number of times the lead has viewed this page
+    query?: string; // Query string parameters (optional)
   };
   timestamp: Date;
 }
@@ -51,8 +47,7 @@ export interface SocialMediaInteractions {
   type: "Social Media Interactions";
   details: {
     platform: string; // Social media platform (e.g., Twitter, LinkedIn)
-    postId: string; // ID of the social media post
-    count: number; // Number of interactions with this post
+    post_id: string; // ID of the social media post
   };
   timestamp: Date;
 }
@@ -60,8 +55,7 @@ export interface SocialMediaInteractions {
 export interface Downloads {
   type: "Downloads";
   details: {
-    resourceId: string; // ID of the resource downloaded
-    count: number; // Number of times the lead has downloaded this resource
+    resource_id: string; // ID of the resource downloaded
   };
   timestamp: Date;
 }
@@ -69,8 +63,7 @@ export interface Downloads {
 export interface EventAttendance {
   type: "Event Attendance";
   details: {
-    eventId: string; // ID of the event attended
-    count: number; // Number of times the lead attended this event
+    event_id: string; // ID of the event attended
   };
   timestamp: Date;
 }
@@ -89,6 +82,7 @@ export interface LeadOwnerChange {
   details: {
     oldOwnerId: string;
     newOwnerId: string;
+    changedBy: string;
   };
   timestamp: Date;
 }
@@ -96,9 +90,7 @@ export interface LeadOwnerChange {
 export interface EmailReceived {
   type: "Email Received";
   details: {
-    from: string;
-    subject: string;
-    body: string;
+    email_id: string;
   };
   timestamp: Date;
 }
@@ -108,6 +100,7 @@ export interface FunnelStageChange {
   details: {
     oldStage: string;
     newStage: string;
+    changedBy: string;
   };
   timestamp: Date;
 }
@@ -115,8 +108,7 @@ export interface FunnelStageChange {
 export interface EnteredFunnel {
   type: "Entered Funnel";
   details: {
-    funnelId: string;
-    funnelName: string;
+    funnel_id: string;
   };
   timestamp: Date;
 }
@@ -125,6 +117,7 @@ export interface UserNote {
   type: "User Note";
   details: {
     note: string;
+    wroteBy: string;
   };
   timestamp: Date;
 }
@@ -135,6 +128,7 @@ export interface ScheduledCall {
     date: string;
     time: string;
     with: string;
+    scheduledBy: string;
   };
   timestamp: Date;
 }
@@ -146,6 +140,7 @@ export interface ScheduledMeeting {
     time: string;
     with: string;
     location: string;
+    scheduledBy: string;
   };
   timestamp: Date;
 }
