@@ -4,7 +4,8 @@ export interface ActivityEvent {
   subject: Subjects.Activity;
   data: {
     company_id: number;
-    lead_id: number;
+    lead_id?: number;
+    email?: string;
     type: string;
     details: any;
     timestamp: any;
