@@ -6,8 +6,10 @@ export interface ActivityEvent {
     company_id: number;
     lead_id?: number;
     email?: string;
-    type: string;
-    details: any;
-    timestamp: any;
+    content: {
+      type: string;
+      details: any;
+      timestamp: any;
+    };
   };
 }

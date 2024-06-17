@@ -24,4 +24,6 @@ export * from "./events/services/payments/subscription-created-event";
 export * from "./events/services/crm/activity-event";
 export * from "./events/subjects";
 
+export * from "./interfaces/activities";
+
 export * from "./templates/emails/index";
