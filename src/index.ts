@@ -20,6 +20,8 @@ export * from "./events/services/landingpage/landingpage-unpublished-event";
 export * from "./events/services/form/form-published-event";
 export * from "./events/services/form/form-unpublished-event";
 export * from "./events/services/forms-resolver/conversion-event";
+export * from "./events/services/payments/subscription-created-event";
+export * from "./events/services/crm/activity-event";
 export * from "./events/subjects";
 
 export * from "./templates/emails/index";
