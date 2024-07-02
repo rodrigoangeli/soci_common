@@ -9,6 +9,8 @@ export interface SubscriptionCreatedEvent {
     plan: string;
     status: string;
     currentPeriodEnd: Date;
-    isTrial: boolean;
+    trialUsed: boolean;
+    trialStartDate: Date;
+    trialEndDate: Date;
   };
 }
