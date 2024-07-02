@@ -10,7 +10,7 @@ export interface SubscriptionCreatedEvent {
     status: string;
     currentPeriodEnd: Date;
     trialUsed: boolean;
-    trialStartDate: Date;
-    trialEndDate: Date;
+    trialStartDate: Date | null;
+    trialEndDate: Date | null;
   };
 }
