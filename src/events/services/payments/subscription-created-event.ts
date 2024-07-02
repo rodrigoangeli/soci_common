@@ -6,7 +6,7 @@ export interface SubscriptionCreatedEvent {
     company_id: number;
     stripeCustomerId: string;
     stripeSubscriptionId: string;
-    plan: string;
+    plan: any;
     status: string;
     currentPeriodEnd: Date;
     trialUsed: boolean;
