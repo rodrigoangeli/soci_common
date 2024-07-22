@@ -1,5 +1,6 @@
 export enum Subjects {
   NewCompanyCreated = "auth:companyCreated",
+  NewCompanyDomain = "auth:companyDomain",
   LandingPagePublished = "landingpage:published",
   LandingPageUnpublished = "landingpage:unpublished",
   FormPublished = "form:published",

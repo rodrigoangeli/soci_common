@@ -15,6 +15,7 @@ export * from "./middlewares/role-handler";
 export * from "./events/base-listener";
 export * from "./events/base-publisher";
 export * from "./events/services/auth/new-company-created-event";
+export * from "./events/services/auth/new-company-domain-event";
 export * from "./events/services/landingpage/landingpage-published-event";
 export * from "./events/services/landingpage/landingpage-unpublished-event";
 export * from "./events/services/form/form-published-event";
