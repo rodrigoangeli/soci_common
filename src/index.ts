@@ -22,6 +22,7 @@ export * from "./events/services/form/form-published-event";
 export * from "./events/services/form/form-unpublished-event";
 export * from "./events/services/forms-resolver/conversion-event";
 export * from "./events/services/payments/subscription-created-event";
+export * from "./events/services/integrations/domain-added-to-identity-event";
 export * from "./events/services/crm/activity-event";
 export * from "./events/subjects";
 
