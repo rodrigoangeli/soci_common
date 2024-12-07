@@ -16,7 +16,7 @@ export abstract class RequestResponsePublisher<T extends Event> {
 
   publish(
     data: Omit<T["data"], "replyTo">
-  ): Promise<{ replyTo: string; response: any }> {
+  ): Promise<{ replyTo: string; response: any[] }> {
     return new Promise((resolve, reject) => {
       const replyTo = `reply.${randomBytes(8).toString("hex")}`; // Generate replyTo internally
 
