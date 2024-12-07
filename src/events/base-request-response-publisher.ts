@@ -14,7 +14,9 @@ export abstract class RequestResponsePublisher<T extends Event> {
     this.client = client;
   }
 
-  publish(data: Omit<T["data"], "replyTo">): Promise<any> {
+  publish(
+    data: Omit<T["data"], "replyTo">
+  ): Promise<{ replyTo: string; response: any }> {
     return new Promise((resolve, reject) => {
       const replyTo = `reply.${randomBytes(8).toString("hex")}`; // Generate replyTo internally
 
@@ -32,7 +34,7 @@ export abstract class RequestResponsePublisher<T extends Event> {
         subscription.unsubscribe(); // Clean up the subscription
         try {
           const response = JSON.parse(msg.getData().toString()); // Parse the response
-          resolve(response); // Resolve with the response data
+          resolve({ replyTo, response }); // Resolve with both replyTo and response
         } catch (error) {
           reject(new Error("Failed to parse response"));
         }
