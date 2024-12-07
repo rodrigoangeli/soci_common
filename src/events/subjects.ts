@@ -7,6 +7,5 @@ export enum Subjects {
   FormUnpublished = "form:unpublished",
   SubscriptionCreated = "subscription:created",
   Conversion = "forms-resolver:conversion",
-  DomainAddedToIdentity = "integrations:domainAddedToIdentity",
   Activity = "crm:activty",
 }

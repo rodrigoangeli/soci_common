@@ -8,5 +8,7 @@ export interface LandingPagePublishedEvent {
     variationData: any;
     data: any;
     company_id: number;
+    subdomain: string;
+    domain: string;
   };
 }
