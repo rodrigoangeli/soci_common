@@ -12,6 +12,7 @@ export enum Subjects {
   Conversion = "forms-resolver:conversion",
 
   FetchSegmentationEvent = "emails:fetchSegmentation",
+  EmailFiringEvent = "emails:firing",
 
   Activity = "crm:activty",
   ResponseSegmentationFetchEvent = "crm:responseSegmentationFetch",
