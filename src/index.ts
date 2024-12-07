@@ -14,6 +14,7 @@ export * from "./middlewares/role-handler";
 
 export * from "./events/base-listener";
 export * from "./events/base-publisher";
+export * from "./events/base-request-response-publisher";
 export * from "./events/services/auth/new-company-created-event";
 export * from "./events/services/auth/new-company-domain-event";
 export * from "./events/services/landingpage/landingpage-published-event";
@@ -24,7 +25,6 @@ export * from "./events/services/forms-resolver/conversion-event";
 export * from "./events/services/emails/fetch-segmentation-event";
 export * from "./events/services/payments/subscription-created-event";
 export * from "./events/services/crm/activity-event";
-export * from "./events/services/crm/reponse-segmentation-fetch-event";
 export * from "./events/subjects";
 
 export * from "./interfaces/activities";
