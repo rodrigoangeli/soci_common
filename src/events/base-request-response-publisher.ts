@@ -24,7 +24,7 @@ export abstract class RequestResponsePublisher<T extends Event> {
       const timeout = setTimeout(() => {
         subscription.unsubscribe(); // Unsubscribe the listener on timeout
         reject(new Error("Request timed out"));
-      }, 10000);
+      }, 40000);
 
       // Subscribe to the reply subject and store the subscription object
       const subscription: Subscription = this.client.subscribe(replyTo);
