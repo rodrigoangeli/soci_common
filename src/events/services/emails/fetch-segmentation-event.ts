@@ -5,7 +5,7 @@ export interface FetchSegmentationEvent {
   data: {
     company_id: number;
     to: string;
-    emailId: number;
+    emailId: string;
     replyTo?: string;
   };
 }

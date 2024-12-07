@@ -5,6 +5,10 @@ export interface EmailFiringEvent {
   data: {
     company_id: number;
     emailId: number;
-    to: any;
+    to: {
+      email: string;
+      name: string;
+      data: any;
+    }[];
   };
 }
