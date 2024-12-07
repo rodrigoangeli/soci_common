@@ -31,7 +31,7 @@ export abstract class RequestResponsePublisher<T extends Event> {
 
       subscription.on("message", (msg) => {
         clearTimeout(timeout); // Clear the timeout on response
-        subscription.unsubscribe(); // Clean up the subscription
+        subscription.unsubscribe();
         try {
           const response = JSON.parse(msg.getData().toString()); // Parse the response
           resolve({ replyTo, response }); // Resolve with both replyTo and response
