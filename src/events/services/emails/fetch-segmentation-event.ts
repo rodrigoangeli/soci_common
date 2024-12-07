@@ -4,5 +4,6 @@ export interface FetchSegmentationEvent {
   subject: Subjects.FetchSegmentationEvent;
   data: {
     to: string;
+    replyTo: string;
   };
 }
