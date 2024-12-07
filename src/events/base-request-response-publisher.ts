@@ -26,7 +26,6 @@ export abstract class RequestResponsePublisher<T extends Event> {
         reject(new Error("Request timed out"));
       }, 40000);
 
-      // Subscribe to the reply subject and store the subscription object
       const subscription: Subscription = this.client.subscribe(replyTo);
 
       subscription.on("message", (msg) => {
