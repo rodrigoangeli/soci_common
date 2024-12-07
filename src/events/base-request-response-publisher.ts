@@ -40,7 +40,6 @@ export abstract class RequestResponsePublisher<T extends Event> {
         }
       });
 
-      // Publish the request with the generated replyTo included
       this.client.publish(
         this.subject,
         JSON.stringify({ ...data, replyTo }), // Merge replyTo into the data
