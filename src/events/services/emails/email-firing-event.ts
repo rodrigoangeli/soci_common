@@ -4,7 +4,7 @@ export interface EmailFiringEvent {
   subject: Subjects.EmailFiringEvent;
   data: {
     company_id: number;
-    emailId: number;
+    emailId: string;
     to: {
       email: string;
       name: string;
