@@ -8,7 +8,7 @@ export interface EmailFiringEvent {
     to: {
       email: string;
       name: string;
-      data: any;
+      data?: any;
     }[];
   };
 }
