@@ -14,9 +14,9 @@ export abstract class RequestResponsePublisher<T extends Event> {
     this.client = client;
   }
 
-  publish(data: T["data"]): Promise<any> {
+  publish(data: Omit<T["data"], "replyTo">): Promise<any> {
     return new Promise((resolve, reject) => {
-      const replySubject = `reply.${randomBytes(8).toString("hex")}`; // Unique reply subject
+      const replyTo = `reply.${randomBytes(8).toString("hex")}`; // Generate replyTo internally
 
       // Timeout after 10 seconds if no response is received
       const timeout = setTimeout(() => {
@@ -25,7 +25,7 @@ export abstract class RequestResponsePublisher<T extends Event> {
       }, 10000);
 
       // Subscribe to the reply subject and store the subscription object
-      const subscription: Subscription = this.client.subscribe(replySubject);
+      const subscription: Subscription = this.client.subscribe(replyTo);
 
       subscription.on("message", (msg) => {
         clearTimeout(timeout); // Clear the timeout on response
@@ -38,10 +38,10 @@ export abstract class RequestResponsePublisher<T extends Event> {
         }
       });
 
-      // Publish the request with the reply subject included
+      // Publish the request with the generated replyTo included
       this.client.publish(
         this.subject,
-        JSON.stringify({ ...data, replyTo: replySubject }),
+        JSON.stringify({ ...data, replyTo }), // Merge replyTo into the data
         (err) => {
           if (err) {
             clearTimeout(timeout);

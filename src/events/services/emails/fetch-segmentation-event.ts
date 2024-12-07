@@ -5,6 +5,6 @@ export interface FetchSegmentationEvent {
   data: {
     company_id: number;
     to: string;
-    replyTo: string;
+    replyTo?: string;
   };
 }
