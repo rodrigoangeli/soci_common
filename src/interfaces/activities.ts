@@ -2,7 +2,7 @@
 
 // Interface for scoring activities with additional details
 export interface EmailOpens {
-  type: "Email Opens";
+  name: "Email Opens";
   details: {
     email_id: string; // ID of the email that was opened
   };
@@ -10,7 +10,7 @@ export interface EmailOpens {
 }
 
 export interface LinkClicks {
-  type: "Link Clicks";
+  name: "Link Clicks";
   details: {
     email_id: string; // ID of the email containing the link
     link: string; // URL of the link that was clicked
@@ -19,7 +19,7 @@ export interface LinkClicks {
 }
 
 export interface FormSubmissions {
-  type: "Form Submissions";
+  name: "Form Submissions";
   details: {
     form_id: string; // ID of the form submitted
   };
@@ -27,7 +27,7 @@ export interface FormSubmissions {
 }
 
 export interface WebsiteVisits {
-  type: "Website Visits";
+  name: "Website Visits";
   details: {
     url: string; // URL of the website visited
   };
@@ -35,7 +35,7 @@ export interface WebsiteVisits {
 }
 
 export interface PageViews {
-  type: "Page Views";
+  name: "Page Views";
   details: {
     url: string; // URL of the page viewed
     query?: string; // Query string parameters (optional)
@@ -44,7 +44,7 @@ export interface PageViews {
 }
 
 export interface SocialMediaInteractions {
-  type: "Social Media Interactions";
+  name: "Social Media Interactions";
   details: {
     platform: string; // Social media platform (e.g., Twitter, LinkedIn)
     post_id: string; // ID of the social media post
@@ -53,7 +53,7 @@ export interface SocialMediaInteractions {
 }
 
 export interface Downloads {
-  type: "Downloads";
+  name: "Downloads";
   details: {
     resource_id: string; // ID of the resource downloaded
   };
@@ -61,7 +61,7 @@ export interface Downloads {
 }
 
 export interface EventAttendance {
-  type: "Event Attendance";
+  name: "Event Attendance";
   details: {
     event_id: string; // ID of the event attended
   };
@@ -69,7 +69,7 @@ export interface EventAttendance {
 }
 
 export interface DemographicFit {
-  type: "Demographic Fit";
+  name: "Demographic Fit";
   details: {
     fitScore: number; // How well the lead matches the target demographic profile
   };
@@ -78,7 +78,7 @@ export interface DemographicFit {
 
 // Interface for non-scoring activities with detailed information
 export interface LeadOwnerChange {
-  type: "Lead Owner Change";
+  name: "Lead Owner Change";
   details: {
     oldOwnerId: string;
     newOwnerId: string;
@@ -88,7 +88,7 @@ export interface LeadOwnerChange {
 }
 
 export interface EmailReceived {
-  type: "Email Received";
+  name: "Email Received";
   details: {
     email_id: string;
   };
@@ -96,7 +96,7 @@ export interface EmailReceived {
 }
 
 export interface FunnelStageChange {
-  type: "Funnel Stage Change";
+  name: "Funnel Stage Change";
   details: {
     oldStage: string;
     newStage: string;
@@ -106,7 +106,7 @@ export interface FunnelStageChange {
 }
 
 export interface EnteredFunnel {
-  type: "Entered Funnel";
+  name: "Entered Funnel";
   details: {
     funnel_id: string;
   };
@@ -114,7 +114,7 @@ export interface EnteredFunnel {
 }
 
 export interface UserNote {
-  type: "User Note";
+  name: "User Note";
   details: {
     note: string;
     wroteBy: string;
@@ -123,7 +123,7 @@ export interface UserNote {
 }
 
 export interface ScheduledCall {
-  type: "Scheduled Call";
+  name: "Scheduled Call";
   details: {
     date: string;
     time: string;
@@ -134,7 +134,7 @@ export interface ScheduledCall {
 }
 
 export interface ScheduledMeeting {
-  type: "Scheduled Meeting";
+  name: "Scheduled Meeting";
   details: {
     date: string;
     time: string;
