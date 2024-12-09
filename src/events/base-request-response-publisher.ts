@@ -20,7 +20,6 @@ export abstract class RequestResponsePublisher<T extends Event> {
     return new Promise((resolve, reject) => {
       const replyTo = `reply.${randomBytes(8).toString("hex")}`; // Generate replyTo internally
 
-      // Timeout after 10 seconds if no response is received
       const timeout = setTimeout(() => {
         subscription.unsubscribe(); // Unsubscribe the listener on timeout
         reject(new Error("Request timed out"));
