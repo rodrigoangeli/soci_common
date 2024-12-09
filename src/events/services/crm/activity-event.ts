@@ -7,6 +7,7 @@ export interface ActivityEvent {
     lead_id?: number;
     email?: string;
     content: {
+      name: string;
       type: string;
       details: any;
       timestamp: any;
