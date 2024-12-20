@@ -16,4 +16,6 @@ export enum Subjects {
 
   Activity = "crm:activty",
   ResponseSegmentationFetchEvent = "crm:responseSegmentationFetch",
+
+  StatsRegister = "landingpage-resolver:statsRegister",
 }
