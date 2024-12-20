@@ -2,7 +2,7 @@ import { Subjects } from "../../subjects";
 
 export interface StatsRegisterEvent {
   subject: Subjects.StatsRegister;
-  data: {
+  data: Array<{
     landingpage_id: number;
     company_id: number;
     date: Date;
@@ -13,5 +13,5 @@ export interface StatsRegisterEvent {
     totalVisitDuration: number;
     trafficSources: object;
     deviceDistribution: object;
-  };
+  }>;
 }
