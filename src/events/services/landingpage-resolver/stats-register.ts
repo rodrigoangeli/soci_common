@@ -8,8 +8,6 @@ export interface StatsRegisterEvent {
     date: Date;
     views: number;
     conversions: number;
-    bounceRate: number;
-    avgTimeOnPage: number;
     totalVisitDuration: number;
     trafficSources: object;
     deviceDistribution: object;
