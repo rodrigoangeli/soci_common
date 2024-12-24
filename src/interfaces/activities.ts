@@ -3,7 +3,7 @@
 // Interface for scoring activities with additional details
 export interface EmailOpens {
   name: "Email Opens";
-  type: "email";
+  type: "email_open";
   details: {
     email_id: string; // ID of the email that was opened
   };
@@ -12,7 +12,7 @@ export interface EmailOpens {
 
 export interface LinkClicks {
   name: "Link Clicks";
-  type: "email";
+  type: "email_click";
   details: {
     email_id: string; // ID of the email containing the link
     link: string; // URL of the link that was clicked
@@ -22,7 +22,7 @@ export interface LinkClicks {
 
 export interface FormSubmissions {
   name: "Form Submissions";
-  type: "conversion";
+  type: "conversion_form";
   details: {
     form_id: string; // ID of the form submitted
   };
@@ -31,7 +31,7 @@ export interface FormSubmissions {
 
 export interface WebsiteVisits {
   name: "Website Visits";
-  type: "website";
+  type: "website_visits";
   details: {
     url: string; // URL of the website visited
   };
@@ -40,7 +40,7 @@ export interface WebsiteVisits {
 
 export interface PageViews {
   name: "Page Views";
-  type: "website";
+  type: "website_view";
   details: {
     url: string; // URL of the page viewed
     query?: string; // Query string parameters (optional)
@@ -60,7 +60,7 @@ export interface SocialMediaInteractions {
 
 export interface Downloads {
   name: "Downloads";
-  type: "conversion";
+  type: "conversion_download";
   details: {
     resource_id: string; // ID of the resource downloaded
   };
@@ -69,7 +69,7 @@ export interface Downloads {
 
 export interface EventAttendance {
   name: "Event Attendance";
-  type: "website";
+  type: "website_event";
   details: {
     event_id: string; // ID of the event attended
   };
@@ -99,7 +99,7 @@ export interface EmailReceived {
 
 export interface FunnelStageChange {
   name: "Funnel Stage Change";
-  type: "funnel";
+  type: "funnel_stage";
   details: {
     oldStage: string;
     newStage: string;
@@ -129,7 +129,7 @@ export interface UserNote {
 
 export interface ScheduledCall {
   name: "Scheduled Call";
-  type: "scheduled";
+  type: "scheduled_call";
   details: {
     date: string;
     time: string;
@@ -141,7 +141,7 @@ export interface ScheduledCall {
 
 export interface ScheduledMeeting {
   name: "Scheduled Meeting";
-  type: "scheduled";
+  type: "scheduled_meeting";
   details: {
     date: string;
     time: string;
