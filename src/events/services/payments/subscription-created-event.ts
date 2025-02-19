@@ -1,5 +1,5 @@
 import { Subjects } from "../../subjects";
-
+//Payment
 export interface SubscriptionCreatedEvent {
   subject: Subjects.SubscriptionCreated;
   data: {
