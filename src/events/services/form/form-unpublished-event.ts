@@ -4,5 +4,6 @@ export interface FormUnpublishedEvent {
   subject: Subjects.FormUnpublished;
   data: {
     form_id: number;
+    company_id: number;
   };
 }
