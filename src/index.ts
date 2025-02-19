@@ -24,6 +24,7 @@ export * from "./events/services/form/form-unpublished-event";
 export * from "./events/services/forms-resolver/conversion-event";
 export * from "./events/services/emails/fetch-segmentation-event";
 export * from "./events/services/emails/email-firing-event";
+export * from "./events/services/emails/email-sent-event";
 export * from "./events/services/payments/subscription-created-event";
 export * from "./events/services/crm/activity-event";
 export * from "./events/services/landingpage-resolver/stats-register";
