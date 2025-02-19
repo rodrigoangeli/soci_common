@@ -13,6 +13,7 @@ export enum Subjects {
 
   FetchSegmentationEvent = "emails:fetchSegmentation",
   EmailFiringEvent = "emails:firing",
+  EmailSentEvent = "emails:sent",
 
   Activity = "crm:activty",
   ResponseSegmentationFetchEvent = "crm:responseSegmentationFetch",
