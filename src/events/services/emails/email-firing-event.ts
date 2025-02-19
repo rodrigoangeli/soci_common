@@ -1,5 +1,5 @@
 import { Subjects } from "../../subjects";
-
+/* Email Firing */
 export interface EmailFiringEvent {
   subject: Subjects.EmailFiringEvent;
   data: {
