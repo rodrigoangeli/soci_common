@@ -6,5 +6,6 @@ export interface ConversionEvent {
     email: string;
     company_id: number;
     fields: any;
+    activities?: any;
   };
 }
