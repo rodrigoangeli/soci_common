@@ -17,6 +17,7 @@ export * from "./events/base-publisher";
 export * from "./events/base-request-response-publisher";
 export * from "./events/services/auth/new-company-created-event";
 export * from "./events/services/auth/new-company-domain-event";
+export * from "./events/services/auth/user-completed-action-event";
 export * from "./events/services/landingpage/landingpage-published-event";
 export * from "./events/services/landingpage/landingpage-unpublished-event";
 export * from "./events/services/form/form-published-event";
