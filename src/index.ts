@@ -29,6 +29,7 @@ export * from "./events/services/emails/email-sent-event";
 export * from "./events/services/payments/subscription-created-event";
 export * from "./events/services/crm/activity-event";
 export * from "./events/services/landingpage-resolver/stats-register";
+export * from "./events/services/ai/new-command-event";
 export * from "./events/subjects";
 
 export * from "./interfaces/activities";

@@ -19,4 +19,6 @@ export enum Subjects {
   ResponseSegmentationFetchEvent = "crm:responseSegmentationFetch",
 
   StatsRegister = "landingpage-resolver:statsRegister",
+
+  NewCommand = "ai:newCommand",
 }
