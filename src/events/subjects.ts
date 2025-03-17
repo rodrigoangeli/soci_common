@@ -6,6 +6,10 @@ export enum Subjects {
 
   LandingPagePublished = "landingpage:published",
   LandingPageUnpublished = "landingpage:unpublished",
+  CreateLandingPage = "landingpage:create",
+  ReadLandingPage = "landingpage:read",
+  UpdateLandingPage = "landingpage:update",
+  DeleteLandingPage = "landingpage:delete",
 
   FormPublished = "form:published",
   FormUnpublished = "form:unpublished",
